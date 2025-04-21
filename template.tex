@@ -1,0 +1,88 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange}
+
+\declaretheoremstyle[name=Principle,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{principle}
+\tcolorboxenvironment{principle}{colback=LightGreen}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Cover Page and ToC
+% ------------------------------------------------------------------------------
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{Relatório do trabalho\\ Concessionária}
+		\HRule{2.0pt} \\ [0.6cm] \LARGE{Ferramentas da Internet} \vspace*{10\baselineskip}}
+		}
+\date{}
+\author{\textbf{Autores:} \\
+		Arthur Rezende\\
+		Danilo Farias\\
+            Davi Tote\\
+            Daniel Aparecido\\
+            Pedro Godoi\\
+		Data 21/04/2025}
+
+\maketitle
+\newpage
+
+
+% ------------------------------------------------------------------------------
+
+\section{Introdução}
+
+Uma concessionária licenciada necessita de um sistema de banco de dados para gerenciar suas operações comerciais e técnicas relacionadas à venda de veículos novos, agendamento e execução de serviços autorizados, controle de estoque de peças, cadastro de clientes e funcionários. A concessionária é autorizada por uma única montadora e, por isso, somente comercializa veículos novos da marca licenciada, não realizando venda de veículos usados ou de outras marcas.
+A concessionária vende uma variedade de modelos de veículos, sendo que cada modelo possui diversas versões (como Standard, Comfort, Premium etc.), que diferem quanto à motorização, câmbio, itens de série e preço. Cada veículo vendido possui um número de chassi único e características específicas como cor, ano de fabricação e ano-modelo. Um veículo é vendido apenas uma vez, e após a venda, é vinculado ao cliente comprador. Cada cliente pode adquirir mais de um veículo ao longo do tempo.
+A concessionária mantém um cadastro completo de clientes, que podem ser pessoas físicas ou jurídicas. Clientes físicos são identificados pelo CPF, enquanto os clientes jurídicos são registrados pelo CNPJ. Ambos os tipos de cliente podem realizar compras de veículos e agendar serviços técnicos para seus veículos, como revisões periódicas, manutenções corretivas, trocas de peças, entre outros.
+Além das vendas, a concessionária também realiza serviços de pós-venda. Os serviços são previamente agendados pelos clientes e executados por funcionários especializados, como mecânicos ou consultores técnicos. Cada serviço possui uma identificação única, datas de agendamento e execução, descrição do serviço realizado, tipo de serviço (como troca de óleo, revisão dos 10 mil km, recall, etc.), valor total cobrado e o veículo ao qual foi realizado. Durante a execução do serviço, podem ser utilizadas peças originais, todas fornecidas pela montadora.
+As peças utilizadas nos serviços são cadastradas com código único, nome, descrição, valor unitário e quantidade disponível em estoque. Uma peça pode ser usada em vários serviços diferentes, e cada serviço pode consumir múltiplas peças, sendo necessário registrar a quantidade utilizada de cada uma delas. O controle dessas informações é essencial para a reposição de estoque e geração de relatórios técnicos e financeiros.
+A concessionária também mantém o registro de seus funcionários, que podem desempenhar funções administrativas, de vendas ou técnicas. Cada funcionário possui um número de identificação exclusivo, nome, CPF, cargo (como vendedor, mecânico, consultor de serviços, gerente, etc.), setor de atuação, data de admissão e salário. Um vendedor é responsável pelo registro da venda de veículos aos clientes, enquanto os mecânicos ou consultores são os responsáveis pela realização dos serviços agendados. Cada venda é realizada por um único funcionário da área de vendas e cada serviço técnico é executado por um único funcionário da oficina.
+Uma venda de veículo é identificada por um número único, contendo a data da venda, o valor final da negociação, o veículo vendido (identificado pelo chassi), o cliente comprador e o funcionário responsável. Um cliente pode realizar múltiplas compras, e cada funcionário pode estar associado a várias vendas ou serviços ao longo do tempo.
+O sistema deve garantir que apenas veículos da marca autorizada estejam cadastrados e disponíveis para venda, e deve manter um histórico completo de vendas, serviços, clientes, funcionários e peças utilizadas. A concessionária também pode gerar relatórios de veículos vendidos por modelo, serviços mais executados, peças mais utilizadas, desempenho de funcionários, entre outros dados estratégicos para o gerenciamento eficiente da operação.
+
+
+\newpage
+
+
+\end{document}
